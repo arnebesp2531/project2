@@ -1,28 +1,105 @@
+body {
+  background-color: lightgray;
+}
+
+#swatches-root {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
 .swatch {
-  width: 200px;
+  margin: 10px;
+  width: 400px;
   height: 100px;
   background-color: burlywood;
   box-sizing: border-box;
   border-radius: 10px;
   position: relative;
-
+  overflow-wrap: break-word;
 }
 
 .swatch > .delete-button {
   position: absolute;
   top: 10px;
   right: 10px;
+  user-select: none;
+}
+
+.swatch > .delete-button:hover {
+  cursor: pointer;
+  transform: scale(1.5);
 }
 
 .swatch > .name {
   position: absolute;
   top: 2px;
-  left: 2px;
+  left: 10px;
   font-size: 24pt;
 }
 
 .swatch > .sequence {
   position: absolute;
+  left: 10px;
   bottom: 10px;
   font-size: 14pt;
+}
+
+
+
+#picker {
+  margin: 10px;
+  width: 80%;
+  height: 300px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: lightskyblue;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+#picker > #headerText {
+  text-align: center;
+  font-size: 24pt;
+  padding: 0;
+  margin: 5px 0 5px 0;
+}
+
+#picker > #buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#picker > #buttons > button{
+  margin: 2px;
+  width: 90px;
+}
+
+#picker > .sequence {
+  padding: 0 5px 0 5px;
+  font-weight: bold;
+  overflow-wrap: break-word;
+  width: 95%;
+  font-size: 14pt;
+}
+
+#picker > .nameBox {
+  position: absolute;
+  bottom: 35px;
+  width: 185px;
+  right: 10px;
+}
+
+#picker > .addButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
